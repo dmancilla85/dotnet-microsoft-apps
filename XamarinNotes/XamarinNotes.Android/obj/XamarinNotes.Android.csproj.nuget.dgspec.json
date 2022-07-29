@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes.Android\\XamarinNotes.Android.csproj": {}
+  },
+  "projects": {
+    "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes.Android\\XamarinNotes.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes.Android\\XamarinNotes.Android.csproj",
+        "projectName": "XamarinNotes.Android",
+        "projectPath": "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes.Android\\XamarinNotes.Android.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes.Android\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid12.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid12.0": {
+            "projectReferences": {
+              "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes\\XamarinNotes.csproj": {
+                "projectPath": "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes\\XamarinNotes.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid12.0": {
+          "dependencies": {
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2196, )"
+            }
+          }
+        }
+      }
+    },
+    "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes\\XamarinNotes.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes\\XamarinNotes.csproj",
+        "projectName": "XamarinNotes",
+        "projectPath": "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes\\XamarinNotes.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2196, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22330.6\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

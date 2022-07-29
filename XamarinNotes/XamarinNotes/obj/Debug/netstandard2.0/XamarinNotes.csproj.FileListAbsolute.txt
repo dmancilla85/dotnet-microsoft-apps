@@ -1,0 +1,17 @@
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\bin\Debug\netstandard2.0\XamarinNotes.deps.json
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\bin\Debug\netstandard2.0\XamarinNotes.dll
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\bin\Debug\netstandard2.0\XamarinNotes.pdb
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\XamarinNotes.csproj.AssemblyReference.cache
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\XamarinNotes.GeneratedMSBuildEditorConfig.editorconfig
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\Views\NotesPage.xaml.g.cs
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\XamarinNotes.AssemblyInfoInputs.cache
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\XamarinNotes.AssemblyInfo.cs
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\XamarinNotes.csproj.CoreCompileInputs.cache
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\XamlC.stamp
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\XamarinNotes.dll
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\refint\XamarinNotes.dll
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\XamarinNotes.pdb
+C:\SANDBOX\dotnet\microsoft-apps\XamarinNotes\XamarinNotes\obj\Debug\netstandard2.0\ref\XamarinNotes.dll

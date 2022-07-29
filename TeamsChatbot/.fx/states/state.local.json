@@ -1,0 +1,26 @@
+{
+    "solution": {
+        "teamsAppTenantId": "3bac2501-1ad3-4f25-8797-0761a8121051"
+    },
+    "fx-resource-aad-app-for-teams": {
+        "clientId": "320af3c7-bc3f-485b-bb9c-42f987f483ec",
+        "clientSecret": "{{fx-resource-aad-app-for-teams.clientSecret}}",
+        "objectId": "64b371df-fae1-4add-9414-181046638f1a",
+        "oauth2PermissionScopeId": "577e82ba-a281-4579-914f-243b64ce2b17",
+        "tenantId": "3bac2501-1ad3-4f25-8797-0761a8121051",
+        "oauthHost": "https://login.microsoftonline.com",
+        "oauthAuthority": "https://login.microsoftonline.com/3bac2501-1ad3-4f25-8797-0761a8121051",
+        "applicationIdUris": "api://botid-6bd732b1-b650-4cf9-b857-01de02b72fa1"
+    },
+    "fx-resource-bot": {
+        "botId": "6bd732b1-b650-4cf9-b857-01de02b72fa1",
+        "botPassword": "{{fx-resource-bot.botPassword}}",
+        "objectId": "4aa8c653-198b-43df-bd16-96a87d79e82e",
+        "siteEndpoint": "https://8251-2800-810-494-1965-3d3b-6f3f-149d-3d46.sa.ngrok.io",
+        "validDomain": "8251-2800-810-494-1965-3d3b-6f3f-149d-3d46.sa.ngrok.io"
+    },
+    "fx-resource-appstudio": {
+        "teamsAppUpdatedAt": 1659053848149,
+        "teamsAppId": "d3af8ec8-c1aa-4998-a657-a599f56de15c"
+    }
+}
