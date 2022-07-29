@@ -221,6 +221,5 @@ async Task MakeGraphCallAsync()
   {
     Console.WriteLine($"{book.CreatedDateTime} - {book.DisplayName}: Created by {book.CreatedBy.User.DisplayName}");
   }
-  
 }
 // </MakeGraphCallSnippet>

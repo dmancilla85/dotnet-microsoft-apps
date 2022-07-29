@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "81HcX7ssHVxDoWBlvE+xbHJYa1j/lBnmVWDwGb/RuW9nD/ypwSz+MaUWQZw+B9hPjkZdmu/V7ISkJu3LY+eAsw==",
+  "dgSpecHash": "9iqoFMIgJg+IAnGiC3SXQsR30Hi1Hc15KExCZSrJF0Q1wV12hr+YO4WdThXXsZx5v7j0f7aibmpCYKy80u4Z7Q==",
   "success": true,
   "projectFilePath": "C:\\SANDBOX\\dotnet\\microsoft-apps\\XamarinNotes\\XamarinNotes\\XamarinNotes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\david\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\david\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512"
   ],
   "logs": []
 }
