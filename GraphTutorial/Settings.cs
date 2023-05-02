@@ -4,15 +4,26 @@
 // <SettingsSnippet>
 using Microsoft.Extensions.Configuration;
 
+namespace GraphTutorial;
+
 public class Settings
 {
-  public string? ClientId { get; set; }
-  public string? ClientSecret { get; set; }
-  public string? TenantId { get; set; }
-  public string? AuthTenant { get; set; }
-  public string[]? GraphUserScopes { get; set; }
+  public string ClientId { get; set; }
+  public string ClientSecret { get; set; }
+  public string TenantId { get; set; }
+  public string AuthTenant { get; set; }
+  public string[] GraphUserScopes { get; set; }
 
-  public static Settings LoadSettings()
+  public Settings()
+  {
+    ClientId = "";
+    ClientSecret = "";
+    TenantId = "";
+    AuthTenant = "";
+    GraphUserScopes = Array.Empty<string>();
+  }
+
+  public static Settings? LoadSettings()
   {
     // Load settings
     IConfiguration config = new ConfigurationBuilder()

@@ -2,9 +2,16 @@
 // Licensed under the MIT license.
 
 // <ProgramSnippet>
+using GraphTutorial;
+
 Console.WriteLine(".NET Graph Tutorial\n");
 
-var settings = Settings.LoadSettings();
+Settings? settings = Settings.LoadSettings();
+
+if (settings == null)
+{
+  throw new FileNotFoundException("Settings not found.");
+}
 
 // Initialize Graph
 InitializeGraph(settings);
@@ -94,7 +101,7 @@ async Task GreetUserAsync()
 {
   try
   {
-    var user = await GraphHelper.GetUserAsync();
+    Microsoft.Graph.User? user = await GraphHelper.GetUserAsync();
     Console.WriteLine($"Hello, {user?.DisplayName}!");
     // For Work/school accounts, email is in Mail property
     // Personal accounts, email is in UserPrincipalName
@@ -112,7 +119,7 @@ async Task DisplayAccessTokenAsync()
 {
   try
   {
-    var userToken = await GraphHelper.GetUserTokenAsync();
+    string userToken = await GraphHelper.GetUserTokenAsync();
     Console.WriteLine($"User token: {userToken}");
   }
   catch (Exception ex)
@@ -127,10 +134,10 @@ async Task ListInboxAsync()
 {
   try
   {
-    var messagePage = await GraphHelper.GetInboxAsync();
+    Microsoft.Graph.IMailFolderMessagesCollectionPage messagePage = await GraphHelper.GetInboxAsync();
 
     // Output each message's details
-    foreach (var message in messagePage.CurrentPage)
+    foreach (Microsoft.Graph.Message? message in messagePage.CurrentPage)
     {
       Console.WriteLine($"Message: {message.Subject ?? "NO SUBJECT"}");
       Console.WriteLine($"  From: {message.From?.EmailAddress?.Name}");
@@ -141,8 +148,8 @@ async Task ListInboxAsync()
     // If NextPageRequest is not null, there are more messages
     // available on the server
     // Access the next page like:
-    // messagePage.NextPageRequest.GetAsync();
-    var moreAvailable = messagePage.NextPageRequest != null;
+    // messagePage.NextPageRequest.GetAsync()
+    bool moreAvailable = messagePage.NextPageRequest != null;
 
     Console.WriteLine($"\nMore messages available? {moreAvailable}");
   }
@@ -160,9 +167,9 @@ async Task SendMailAsync()
   {
     // Send mail to the signed-in user
     // Get the user for their email address
-    var user = await GraphHelper.GetUserAsync();
+    Microsoft.Graph.User? user = await GraphHelper.GetUserAsync();
 
-    var userEmail = user?.Mail ?? user?.UserPrincipalName;
+    string? userEmail = user?.Mail ?? user?.UserPrincipalName;
 
     if (string.IsNullOrEmpty(userEmail))
     {
@@ -187,10 +194,10 @@ async Task ListUsersAsync()
 {
   try
   {
-    var userPage = await GraphHelper.GetUsersAsync();
+    Microsoft.Graph.IGraphServiceUsersCollectionPage userPage = await GraphHelper.GetUsersAsync();
 
     // Output each users's details
-    foreach (var user in userPage.CurrentPage)
+    foreach (Microsoft.Graph.User? user in userPage.CurrentPage)
     {
       Console.WriteLine($"User: {user.DisplayName ?? "NO NAME"}");
       Console.WriteLine($"  ID: {user.Id}");
@@ -200,8 +207,8 @@ async Task ListUsersAsync()
     // If NextPageRequest is not null, there are more users
     // available on the server
     // Access the next page like:
-    // userPage.NextPageRequest.GetAsync();
-    var moreAvailable = userPage.NextPageRequest != null;
+    // userPage.NextPageRequest.GetAsync()
+    bool moreAvailable = userPage.NextPageRequest != null;
 
     Console.WriteLine($"\nMore users available? {moreAvailable}");
   }
@@ -215,9 +222,9 @@ async Task ListUsersAsync()
 // <MakeGraphCallSnippet>
 async Task MakeGraphCallAsync()
 {
-  var OnenoteBooks = await GraphHelper.MakeGraphCallAsync();
+  Microsoft.Graph.IOnenoteNotebooksCollectionPage OnenoteBooks = await GraphHelper.MakeGraphCallAsync();
 
-  foreach (var book in OnenoteBooks)
+  foreach (Microsoft.Graph.Notebook? book in OnenoteBooks)
   {
     Console.WriteLine($"{book.CreatedDateTime} - {book.DisplayName}: Created by {book.CreatedBy.User.DisplayName}");
   }

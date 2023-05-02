@@ -5,7 +5,7 @@ using Microsoft.TeamsFx.Conversation;
 using TeamsChatbot;
 using TeamsChatbot.Commands;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddHttpClient("WebClient", client => client.Timeout = TimeSpan.FromSeconds(600));
@@ -28,14 +28,15 @@ builder.Services.AddSingleton<BotAdapter>(sp => sp.GetService<CloudAdapter>());
 
 // Create command handlers and the Conversation with command-response feature enabled.
 builder.Services.AddSingleton<HelloWorldCommandHandler>();
+builder.Services.AddSingleton<WhoAmICommandHandler>();
 builder.Services.AddSingleton(sp =>
 {
-  var options = new ConversationOptions()
+  ConversationOptions options = new()
   {
     Adapter = sp.GetService<CloudAdapter>(),
     Command = new CommandOptions()
     {
-      Commands = new List<ITeamsCommandHandler> { sp.GetService<HelloWorldCommandHandler>() }
+      Commands = new List<ITeamsCommandHandler> { sp.GetService<HelloWorldCommandHandler>(), sp.GetService<WhoAmICommandHandler>() }
     }
   };
 
@@ -45,7 +46,7 @@ builder.Services.AddSingleton(sp =>
 // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
 builder.Services.AddTransient<IBot, TeamsBot>();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {

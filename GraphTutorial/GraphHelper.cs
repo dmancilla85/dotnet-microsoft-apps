@@ -5,13 +5,15 @@ using Azure.Core;
 using Azure.Identity;
 using Microsoft.Graph;
 
-internal class GraphHelper
+namespace GraphTutorial;
+
+internal static class GraphHelper
 {
   #region User-auth
 
   // <UserAuthConfigSnippet>
   // Settings object
-  private static Settings? _settings;
+  private static Settings _settings = new();
 
   // User auth token credential
   private static DeviceCodeCredential? _deviceCodeCredential;
@@ -40,11 +42,10 @@ internal class GraphHelper
         throw new System.NullReferenceException("Graph has not been initialized for user auth");
 
     // Ensure scopes isn't null
-    _ = _settings?.GraphUserScopes ?? throw new System.ArgumentNullException("Argument 'scopes' cannot be null");
 
     // Request token with given scopes
-    var context = new TokenRequestContext(_settings.GraphUserScopes);
-    var response = await _deviceCodeCredential.GetTokenAsync(context);
+    TokenRequestContext context = new TokenRequestContext(_settings.GraphUserScopes);
+    AccessToken response = await _deviceCodeCredential.GetTokenAsync(context);
     return response.Token;
   }
 
@@ -108,7 +109,7 @@ internal class GraphHelper
         throw new System.NullReferenceException("Graph has not been initialized for user auth");
 
     // Create a new message
-    var message = new Message
+    Message message = new Message
     {
       Subject = subject,
       Body = new ItemBody
@@ -200,17 +201,24 @@ internal class GraphHelper
   // or other code
   public static async Task<IOnenoteNotebooksCollectionPage> MakeGraphCallAsync()
   {
-    // INSERT YOUR CODE HERE
     // Note: if using _appClient, be sure to call EnsureGraphForAppOnlyAuth
     // before using it.
-    // EnsureGraphForAppOnlyAuth();
-    // Ensure client isn't null
-    _ = _userClient ??
-        throw new System.NullReferenceException("Graph has not been initialized for app-only auth");
+    // EnsureGraphForAppOnlyAuth
+    try
+    {
+      // Ensure client isn't null
+      _ = _userClient ??
+          throw new System.NullReferenceException("Graph has not been initialized for app-only auth");
 
-    return await _userClient.Me.Onenote.Notebooks
+      return await _userClient.Me.Onenote.Notebooks
       .Request()
       .GetAsync();
+    }
+    catch (Exception ex)
+    {
+      Console.WriteLine($"Something has happened: {ex.Message}");
+      return new OnenoteNotebooksCollectionPage();
+    }
   }
 
   // </MakeGraphCallSnippet>

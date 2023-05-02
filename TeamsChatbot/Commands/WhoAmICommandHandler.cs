@@ -8,21 +8,21 @@ using TeamsChatbot.Models;
 namespace TeamsChatbot.Commands
 {
   /// <summary>
-  /// The <see cref="HelloWorldCommandHandler"/> registers a pattern with the <see cref="ITeamsCommandHandler"/> and
+  /// The <see cref="WhoAmICommandHandler"/> registers a pattern with the <see cref="ITeamsCommandHandler"/> and
   /// responds with an Adaptive Card if the user types the <see cref="TriggerPatterns"/>.
   /// </summary>
-  public class HelloWorldCommandHandler : ITeamsCommandHandler
+  public class WhoAmICommandHandler : ITeamsCommandHandler
   {
-    private readonly ILogger<HelloWorldCommandHandler> _logger;
-    private readonly string _adaptiveCardFilePath = Path.Combine(".", "Resources", "HelloWorldCard.json");
+    private readonly ILogger<WhoAmICommandHandler> _logger;
+    private readonly string _adaptiveCardFilePath = Path.Combine(".", "Resources", "WhoAmICard.json");
 
     public IEnumerable<ITriggerPattern> TriggerPatterns => new List<ITriggerPattern>
         {
             // Used to trigger the command handler if the command text contains 'helloWorld'
-            new RegExpTrigger("helloWorld")
+            new RegExpTrigger("who am I")
         };
 
-    public HelloWorldCommandHandler(ILogger<HelloWorldCommandHandler> logger)
+    public WhoAmICommandHandler(ILogger<WhoAmICommandHandler> logger)
     {
       _logger = logger;
     }
@@ -39,7 +39,7 @@ namespace TeamsChatbot.Commands
       (
           new HelloWorldModel
           {
-            Title = "Your Hello World Bot is Running",
+            Title = "You want to know who am I?",
             Body = "Congratulations! Your hello world bot is running. Click the documentation below to learn more about Bots and the Teams Toolkit.",
           }
       );
