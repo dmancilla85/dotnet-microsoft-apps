@@ -6,12 +6,7 @@ using GraphTutorial;
 
 Console.WriteLine(".NET Graph Tutorial\n");
 
-Settings? settings = Settings.LoadSettings();
-
-if (settings == null)
-{
-  throw new FileNotFoundException("Settings not found.");
-}
+Settings settings = Settings.LoadSettings();
 
 // Initialize Graph
 InitializeGraph(settings);
@@ -148,7 +143,7 @@ async Task ListInboxAsync()
     // If NextPageRequest is not null, there are more messages
     // available on the server
     // Access the next page like:
-    // messagePage.NextPageRequest.GetAsync()
+    // messagePage.NextPageRequest.GetAsync();
     bool moreAvailable = messagePage.NextPageRequest != null;
 
     Console.WriteLine($"\nMore messages available? {moreAvailable}");
@@ -207,7 +202,7 @@ async Task ListUsersAsync()
     // If NextPageRequest is not null, there are more users
     // available on the server
     // Access the next page like:
-    // userPage.NextPageRequest.GetAsync()
+    // userPage.NextPageRequest.GetAsync();
     bool moreAvailable = userPage.NextPageRequest != null;
 
     Console.WriteLine($"\nMore users available? {moreAvailable}");
