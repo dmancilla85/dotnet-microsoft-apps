@@ -1,4 +1,4 @@
-namespace TeamsChatbot.Models
+﻿namespace TeamsChatbot.Models
 {
   public class WhoAmIModel
   {

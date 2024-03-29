@@ -1,4 +1,4 @@
-using AdaptiveCards.Templating;
+﻿using AdaptiveCards.Templating;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
 using Microsoft.TeamsFx.Conversation;
