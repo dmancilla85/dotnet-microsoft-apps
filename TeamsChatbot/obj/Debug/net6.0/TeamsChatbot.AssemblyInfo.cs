@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamsChatbot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25dfaeaf28176e19582ae2bdc6a97899ca340cd4")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamsChatbot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamsChatbot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
