@@ -2,11 +2,11 @@
 
 namespace XamarinNotes
 {
-  public partial class AppShell : Shell
-  {
-    public AppShell()
+    public partial class AppShell : Shell
     {
-      InitializeComponent();
+        public AppShell()
+        {
+            InitializeComponent();
+        }
     }
-  }
 }

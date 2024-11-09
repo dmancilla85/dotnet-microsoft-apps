@@ -1,20 +1,21 @@
 ﻿using System;
+
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace XamarinNotes.Views
 {
-  public partial class AboutPage : ContentPage
-  {
-    public AboutPage()
+    public partial class AboutPage : ContentPage
     {
-      InitializeComponent();
-    }
+        public AboutPage()
+        {
+            InitializeComponent();
+        }
 
-    private async void OnButtonClicked(object sender, EventArgs e)
-    {
-      // Launch the specified URL in the system browser.
-      await Launcher.OpenAsync("https://aka.ms/xamarin-quickstart");
+        private async void OnButtonClicked(object sender, EventArgs e)
+        {
+            // Launch the specified URL in the system browser.
+            await Launcher.OpenAsync("https://aka.ms/xamarin-quickstart");
+        }
     }
-  }
 }

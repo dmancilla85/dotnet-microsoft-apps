@@ -2,6 +2,7 @@ using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Bot.Connector.Authentication;
 using Microsoft.TeamsFx.Conversation;
+
 using TeamsChatbot;
 using TeamsChatbot.Commands;
 
@@ -31,16 +32,16 @@ builder.Services.AddSingleton<HelloWorldCommandHandler>();
 builder.Services.AddSingleton<WhoAmICommandHandler>();
 builder.Services.AddSingleton(sp =>
 {
-  ConversationOptions options = new()
-  {
-    Adapter = sp.GetService<CloudAdapter>(),
-    Command = new CommandOptions()
+    ConversationOptions options = new()
     {
-      Commands = new List<ITeamsCommandHandler> { sp.GetService<HelloWorldCommandHandler>(), sp.GetService<WhoAmICommandHandler>() }
-    }
-  };
+        Adapter = sp.GetService<CloudAdapter>(),
+        Command = new CommandOptions()
+        {
+            Commands = new List<ITeamsCommandHandler> { sp.GetService<HelloWorldCommandHandler>(), sp.GetService<WhoAmICommandHandler>() }
+        }
+    };
 
-  return new ConversationBot(options);
+    return new ConversationBot(options);
 });
 
 // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
@@ -50,14 +51,14 @@ WebApplication app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-  app.UseDeveloperExceptionPage();
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseStaticFiles();
 app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
-  endpoints.MapControllers();
+    endpoints.MapControllers();
 });
 
 app.Run();

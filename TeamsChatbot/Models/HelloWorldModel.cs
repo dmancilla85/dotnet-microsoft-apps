@@ -1,9 +1,9 @@
 ﻿namespace TeamsChatbot.Models
 {
-  public class HelloWorldModel
-  {
-    public string Title { get; set; }
+    public class HelloWorldModel
+    {
+        public string Title { get; set; }
 
-    public string Body { get; set; }
-  }
+        public string Body { get; set; }
+    }
 }
